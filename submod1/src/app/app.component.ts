@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {aap} from "../../submod2/test";
+import {UwuService} from "../../submod2/services/uwu.service";
 
 @Component({
   selector: 'app-root',
@@ -9,8 +9,11 @@ import {aap} from "../../submod2/test";
 export class AppComponent implements OnInit {
   title = 'submod1';
 
+  constructor(private uwuService: UwuService) {
+  }
+
   ngOnInit(): void {
     console.log('yay');
-    console.log(aap);
+    console.log(this.uwuService.bla())
   }
 }
